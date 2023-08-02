@@ -1,0 +1,35 @@
+@import "../../style.scss";
+
+.posts {
+    @include themify($themes) {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        .filter {
+
+            button {
+                border: none;
+                padding: 8px;
+                color: white;
+                cursor: pointer;
+                background-color: themed("buttonColor");
+                border-radius: 3px;
+                display: flex;
+                align-items: center;
+
+            }
+
+            button:disabled {
+                background-color: darkgrey;
+            }
+
+            .list {
+                display: flex;
+                gap: 10px;
+                padding-top: 10px;
+            }
+
+        }
+    }
+}
